@@ -7,7 +7,7 @@ The 'Research' folder stores shareable scripts I wrote for my research on stock 
 - applied Fisher optimal partition, cluster analysis, factor loading matrix, Sortino ratio and Carhart four-factor model using packages and self-defined function based on statistics
 -----------------
 
-The 'code.do' is a shareable script I wrote for my thesis on graduation. The thesis belongs to School of Management, Fudan University.
+The 'thesis.do' is a shareable script I wrote for my thesis on graduation using Stata. The thesis belongs to School of Management, Fudan University.
 <br>
 The code in the folder works on
 - some data preprocessing
