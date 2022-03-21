@@ -1,3 +1,7 @@
+# A self-defined function to conduct fisher optimal partition
+
+
+
 ocluster = function(datasam, classnum) {
   
   #样本数
