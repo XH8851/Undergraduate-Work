@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="strutsqs" extends="struts-default" namespace="/" >
+		<!-- 登录,退出,修改密码-->
+		<action name="GoLogin" class="com.action.GoLogin">
+			<result name="input">/Login.jsp</result>
+			<result name="success">/Index.jsp</result>
+		</action>
+		<action name="Quit" class="com.action.Quit">
+			<result name="success">/Login.jsp</result>
+		</action>
+		<action name="PasswordUpdateSave" class="com.action.PasswordUpdateSave">
+			<result name="input">/PasswordUpdate.jsp</result>
+		</action>
+		
+		<!-- 招聘者-->
+		<action name="EmployerManager" class="com.action.Employer.EmployerManager">
+			<result name="success">/Employer/EmployerManager.jsp</result>
+		</action>
+		<action name="EmployerAddSave" class="com.action.Employer.EmployerAddSave">
+		</action>
+		<action name="EmployerUpdate" class="com.action.Employer.EmployerUpdate">
+		    <result name="success">/Employer/EmployerUpdate.jsp</result>
+		</action>
+		<action name="EmployerUpdateSave" class="com.action.Employer.EmployerUpdateSave">
+		</action>
+		<action name="EmployerDel" class="com.action.Employer.EmployerDel">
+		  <result name="success" type="chain">EmployerManager</result>
+		</action>
+		
+		
+		<!-- 求职者-->
+		<action name="EmployeeManager" class="com.action.Employee.EmployeeManager">
+			<result name="success">/Employee/EmployeeManager.jsp</result>
+		</action>
+		
+		<action name="EmployeeAddSave" class="com.action.Employee.EmployeeAddSave">
+		</action>
+		
+		<action name="EmployeeUpdate" class="com.action.Employee.EmployeeUpdate">
+		    <result name="success">/Employee/EmployeeUpdate.jsp</result>
+		</action>
+		
+		<action name="EmployeeUpdateSave" class="com.action.Employee.EmployeeUpdateSave">
+		</action>
+		
+		<action name="EmployeeDel" class="com.action.Employee.EmployeeDel">
+		  <result name="success" type="chain">EmployeeManager</result>
+		</action>
+		
+		
+		<!-- 招聘-->
+		<action name="ApplyManager" class="com.action.Apply.ApplyManager">
+			<result name="success">/Apply/ApplyManager.jsp</result>
+		</action>
+		
+		<action name="ApplyAddSave" class="com.action.Apply.ApplyAddSave">
+		</action>
+		
+		<action name="ApplyDel" class="com.action.Apply.ApplyDel">
+		  <result name="success" type="chain">ApplyManager</result>
+		</action>
+		
+		<action name="Report" class="com.action.Apply.Report">
+		  <result name="success" >/Apply/Report.jsp</result>
+		</action>
+		
+		<action name="ReportFb" class="com.action.Apply.ReportFb">
+		  <result name="success" >/Apply/ReportFb.jsp</result>
+		</action>
+		
+		<action name="InternRate" class="com.action.Apply.InternRate">
+		  <result name="success" >/Apply/InternRate.jsp</result>
+		</action>
+		
+		<action name="EmployeeRate" class="com.action.Apply.EmployeeRate">
+		  <result name="success" >/Apply/EmployeeRate.jsp</result>
+		</action>
+		
+		<action name="AppStatusUpdate" class="com.action.Apply.AppStatusUpdate">
+		  <result name="success" >/Apply/AppStatusUpdate.jsp</result>
+		</action>
+		
+		
+		<action name="ReportSave" class="com.action.Apply.ReportSave">
+		  <result name="success" type="chain">ApplyManager</result>
+		</action>
+		
+		<action name="ReportFbSave" class="com.action.Apply.ReportFbSave">
+		  <result name="success" type="chain">ApplyManager</result>
+		</action>
+		
+		<action name="InternRateSave" class="com.action.Apply.InternRateSave">
+		  <result name="success" type="chain">ApplyManager</result>
+		</action>
+		
+		<action name="EmployeeRateSave" class="com.action.Apply.EmployeeRateSave">
+		  <result name="success" type="chain">ApplyManager</result>
+		</action>
+		
+		<action name="AppStatusUpdateSave" class="com.action.Apply.AppStatusUpdateSave">
+		  <result name="success" type="chain">ApplyManager</result>
+		</action>
+		
+		
+		<!-- 招聘基础信息 -->
+		<action name="InternshipManager" class="com.action.Internship.InternshipManager">
+			<result name="success">/Internship/InternshipManager.jsp</result>
+		</action>
+		<action name="InternshipAddSave" class="com.action.Internship.InternshipAddSave">
+		</action>
+		<action name="InternshipUpdate" class="com.action.Internship.InternshipUpdate">
+		    <result name="success">/Internship/InternshipUpdate.jsp</result>
+		</action>
+		<action name="InternshipUpdateSave" class="com.action.Internship.InternshipUpdateSave">
+		</action>
+		<action name="InternshipDel" class="com.action.Internship.InternshipDel">
+		  <result name="success" type="chain">InternshipManager</result>
+		</action>
+		
+	
+		
+	</package>
+</struts>    
